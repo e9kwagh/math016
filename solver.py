@@ -3,10 +3,12 @@
 
 def solver(n):
     """solver"""
-    start = str(2**4)
+    start = str(2)
     final = ""
+    if n == 0 :
+        return 1
 
-    for _ in range(5, n + 1):
+    for _ in range(2, n + 1):
         start = str(start)    
         result,carry = "",0
         for num in start[::-1]:
@@ -24,4 +26,4 @@ def solver(n):
 
 
 if __name__ == "__main__":
-    print(solver(10))
+    print(solver(1000))
